@@ -165,7 +165,15 @@ const Hero = () => {
               className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-2"
             >
               <MessageCircle size={18} className="text-brand-green" />
-              Chat on WhatsApp
+              WhatsApp
+            </a>
+            <a 
+              href="mailto:launchlabhq33@gmail.com?subject=Inquiry%20from%20Website" 
+              target="_blank"
+              className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-2"
+            >
+              <Mail size={18} className="text-brand-green" />
+              Email
             </a>
           </div>
         </motion.div>
@@ -380,6 +388,7 @@ const Work = () => {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, scale: 1.02, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05)" }}
               viewport={{ once: true }}
               className="group p-12 bg-white border border-brand-border rounded-3xl hover:border-brand-green/30 transition-all duration-300 flex flex-col justify-between"
             >
@@ -615,6 +624,14 @@ const FinalCTA = () => {
               <MessageCircle size={20} className="text-brand-green" />
               WhatsApp Now
             </a>
+            <a 
+              href="mailto:launchlabhq33@gmail.com?subject=Inquiry%20from%20Website" 
+              target="_blank"
+              className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-2"
+            >
+              <Mail size={20} className="text-brand-green" />
+              Email Us
+            </a>
           </div>
         </motion.div>
       </div>
@@ -638,7 +655,7 @@ const Footer = () => {
           <a href="#work" className="hover:text-brand-dark transition-colors">Work</a>
           <a href="#pricing" className="hover:text-brand-dark transition-colors">Pricing</a>
           <a href="#process" className="hover:text-brand-dark transition-colors">Process</a>
-          <a href="mailto:toolshubbusiness@gmail.com?subject=Inquiry%20from%20Website" className="hover:text-brand-dark transition-colors flex items-center gap-1">
+          <a href="mailto:launchlabhq33@gmail.com?subject=Inquiry%20from%20Website" target="_blank" className="hover:text-brand-dark transition-colors flex items-center gap-1">
             <Mail size={14} />
             Email
           </a>
