@@ -139,7 +139,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl"
+          className="max-w-4xl"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green-light border border-brand-green/10 text-brand-green text-[11px] font-bold uppercase tracking-widest mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse" />
@@ -147,11 +147,11 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-[1.1] text-brand-dark mb-8">
-            Get More Customers for Your Business — <span className="text-brand-green">Not Just a Website</span>
+            We Build Digital Systems That <span className="text-brand-green">Drive Real Revenue.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-brand-dark/60 mb-12 leading-relaxed max-w-2xl">
-            I build fast, high-converting websites and tools that help you get real leads and grow your business.
+          <p className="text-lg md:text-xl text-brand-dark/60 mb-12 leading-relaxed max-w-3xl">
+            LaunchLabHQ is a high-end digital studio that transforms ambitious ideas into scalable SaaS products, high-converting landing pages, and automated growth engines. We don't just build websites; we engineer business results.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -177,20 +177,100 @@ const Hero = () => {
   );
 };
 
+const Mission = () => {
+  return (
+    <section className="py-24 bg-white border-b border-brand-border">
+      <div className="container-custom">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="text-brand-green font-bold tracking-widest text-[11px] uppercase mb-6 block">Our Core Mission</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-dark tracking-tight mb-8">
+              Bridging the gap between <span className="text-brand-green">visionary ideas</span> and market-leading products.
+            </h2>
+            <p className="text-lg text-subtle mb-6 leading-relaxed">
+              LaunchLabHQ was founded on a simple principle: digital products should be assets, not expenses. We specialize in working with founders and businesses who are ready to move beyond generic solutions and build something truly exceptional.
+            </p>
+            <p className="text-lg text-subtle leading-relaxed">
+              Our process is rooted in a deep understanding of user psychology, modern engineering, and business strategy. We take the technical complexity off your plate so you can focus on what you do best—scaling your business.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="p-8 bg-brand-grey rounded-2xl border border-brand-border">
+              <div className="text-brand-green mb-4"><Zap size={32} /></div>
+              <h3 className="font-bold text-brand-dark mb-2">Rapid Deployment</h3>
+              <p className="text-sm text-subtle">We optimize for speed without sacrificing quality, getting your product to market faster.</p>
+            </div>
+            <div className="p-8 bg-brand-grey rounded-2xl border border-brand-border sm:mt-8">
+              <div className="text-brand-green mb-4"><TrendingUp size={32} /></div>
+              <h3 className="font-bold text-brand-dark mb-2">Scalable Growth</h3>
+              <p className="text-sm text-subtle">Every system we build is designed to scale seamlessly as your user base grows.</p>
+            </div>
+            <div className="p-8 bg-brand-grey rounded-2xl border border-brand-border">
+              <div className="text-brand-green mb-4"><ShieldCheck size={32} /></div>
+              <h3 className="font-bold text-brand-dark mb-2">Premium Quality</h3>
+              <p className="text-sm text-subtle">We maintain the highest standards of code quality, security, and UI/UX design.</p>
+            </div>
+            <div className="p-8 bg-brand-grey rounded-2xl border border-brand-border sm:mt-8">
+              <div className="text-brand-green mb-4"><Target size={32} /></div>
+              <h3 className="font-bold text-brand-dark mb-2">ROI Focused</h3>
+              <p className="text-sm text-subtle">Our primary metric for success is the tangible business value we create for you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhyUs = () => {
+  const benefits = [
+    { title: "Strategic Partnership", desc: "We don't just take orders; we provide strategic guidance to ensure your digital product succeeds in the real world." },
+    { title: "Modern Tech Stack", desc: "We use the latest technologies like React, Tailwind, and AI-driven tools to build fast, secure, and future-proof systems." },
+    { title: "User-Centric Design", desc: "Every pixel is placed with intent, ensuring your users have a seamless experience that leads to conversion." },
+    { title: "Transparent Process", desc: "You'll always know exactly where your project stands with regular updates and direct access to the builders." }
+  ];
+
+  return (
+    <section className="py-24 bg-white">
+      <div className="container-custom">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <span className="text-brand-green font-bold tracking-widest text-[11px] uppercase mb-4 block">The Difference</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-dark tracking-tight mb-6">Why ambitious founders choose LaunchLabHQ.</h2>
+          <p className="text-lg text-subtle">We combine the agility of a startup with the precision of a high-end studio to deliver results that matter.</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((b, i) => (
+            <div key={i} className="p-8 bg-brand-grey rounded-2xl border border-brand-border hover:border-brand-green/20 transition-all duration-300">
+              <h3 className="text-lg font-bold mb-4 text-brand-dark">{b.title}</h3>
+              <p className="text-sm text-subtle leading-relaxed">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Solutions = () => {
   const solutions = [
-    { title: "More customer inquiries", desc: "Turn passive visitors into active leads and calls for your business." },
-    { title: "Better online trust", desc: "A professional presence that makes customers choose you over competitors." },
-    { title: "24/7 business presence", desc: "Your business stays open and keeps selling even while you sleep." },
-    { title: "A system that works", desc: "A system that works even when you're offline, handling leads automatically." },
+    { title: "Revenue Generation", desc: "We don't just drive traffic; we build systems that turn passive visitors into high-paying customers." },
+    { title: "Brand Authority", desc: "Establish a premium digital presence that commands respect and positions you as a market leader." },
+    { title: "Operational Efficiency", desc: "Automate your lead capture and customer onboarding with smart, integrated digital ecosystems." },
+    { title: "Scalable Architecture", desc: "Our systems are built to grow with you, handling increased demand without breaking a sweat." },
   ];
 
   return (
     <section id="solutions" className="section-padding bg-brand-grey border-y border-brand-border">
       <div className="container-custom">
         <div className="max-w-2xl mb-20">
-          <span className="text-brand-green font-bold tracking-widest text-[11px] uppercase mb-4 block">What You Actually Get</span>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-dark tracking-tight">Focus on results, not just code.</h2>
+          <span className="text-brand-green font-bold tracking-widest text-[11px] uppercase mb-4 block">The LaunchLabHQ Advantage</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-dark tracking-tight">Engineering results, not just websites.</h2>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -269,15 +349,15 @@ const Work = () => {
   const projects = [
     {
       title: "ToolsFocus",
-      desc: "Built to attract users through useful tools — shows how I create platforms that people actually use.",
+      desc: "A comprehensive utility ecosystem engineered for high-volume traffic and user utility. Built to demonstrate scalable architecture and intuitive UX that converts casual visitors into recurring users.",
       link: "https://toolsfocus.vercel.app/",
-      tag: "Utility Platform"
+      tag: "SaaS Ecosystem"
     },
     {
       title: "Dino Games",
-      desc: "Built for engagement and user retention — shows how I build interactive experiences that keep users coming back.",
+      desc: "An immersive interactive platform designed for maximum engagement and retention. Showcasing high-performance rendering and real-time user interaction patterns that drive digital growth.",
       link: "https://dinogames.vercel.app/",
-      tag: "Interactive Experience"
+      tag: "Interactive Platform"
     }
   ];
 
@@ -474,25 +554,25 @@ const About = () => {
     <section id="about" className="section-padding bg-brand-grey border-y border-brand-border">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-brand-green font-bold tracking-widest text-[11px] uppercase mb-6 block">The Builder</span>
+          <span className="text-brand-green font-bold tracking-widest text-[11px] uppercase mb-6 block">The Founders</span>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-8 text-brand-dark tracking-tight">
-            Meet Kadam.
+            Vismit Patil & Meet Kadam.
           </h2>
           <p className="text-xl text-subtle mb-12 leading-relaxed">
-            I’m Meet Kadam, a 19-year-old builder who has created real projects like ToolsFocus and Dino Games. I focus on building fast, learning fast, and helping businesses grow online with practical solutions.
+            We are the architects behind LaunchLabHQ. We specialize in building high-performance digital systems for businesses that demand excellence. Our focus is on engineering solutions that don't just look good, but drive significant ROI and scale with your ambitions.
           </p>
           <div className="flex justify-center gap-16">
             <div>
-              <div className="text-4xl font-display font-bold text-brand-dark mb-1">2+</div>
-              <div className="text-[11px] uppercase tracking-widest text-brand-dark/30 font-bold">Live Products</div>
+              <div className="text-4xl font-display font-bold text-brand-dark mb-1">Premium</div>
+              <div className="text-[11px] uppercase tracking-widest text-brand-dark/30 font-bold">SaaS Quality</div>
             </div>
             <div>
               <div className="text-4xl font-display font-bold text-brand-dark mb-1">100%</div>
               <div className="text-[11px] uppercase tracking-widest text-brand-dark/30 font-bold">Focus on ROI</div>
             </div>
             <div>
-              <div className="text-4xl font-display font-bold text-brand-dark mb-1">19</div>
-              <div className="text-[11px] uppercase tracking-widest text-brand-dark/30 font-bold">Years Old</div>
+              <div className="text-4xl font-display font-bold text-brand-dark mb-1">Expert</div>
+              <div className="text-[11px] uppercase tracking-widest text-brand-dark/30 font-bold">Execution</div>
             </div>
           </div>
         </div>
@@ -575,7 +655,9 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Mission />
         <Solutions />
+        <WhyUs />
         <Builder />
         <Work />
         <Services />
